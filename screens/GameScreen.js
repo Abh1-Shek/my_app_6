@@ -35,6 +35,11 @@ function GameScreen({ userNumber, onGameOver }) {
         // console.log('user=', userNumber);
     }, [currentGuess, userNumber, onGameOver]);
 
+    useEffect(() => {
+        minBoundary = 1;
+        maxBoundary = 100;
+    }, []);  // this runs only when this component is added to the ui
+
 
     function nextGuessHandler(direction) { // 'lower' or 'greater'
 
